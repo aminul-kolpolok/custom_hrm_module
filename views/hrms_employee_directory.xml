@@ -1,0 +1,66 @@
+<odoo>
+    <record id="hr_employee_public_form_inherited" model="ir.ui.view">
+            <field name="name">hr.employee.public.form.inherited</field>
+            <field name="model">hr.employee.public</field>
+            <field name="inherit_id" ref="hr.hr_employee_public_view_form"/>
+<!--            <field name="priority" eval="8"/>-->
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='address_id']" position="before">
+                    <field name="joining_date"/>
+                    <field name="probation_period"/>
+                    <field name="conf_due_date"/>
+                    <field name="date_of_confirmation"/>
+                </xpath>
+
+                <xpath expr="//field[@name='work_email']" position="after">
+                    <field name="team_name" readonly="1"/>
+                    <field name="section"/>
+                    <field name="emp_contract_type"/>
+                </xpath>
+<!--                <xpath expr="//field[@name='leave_manager_id']" position="attributes">-->
+<!--&lt;!&ndash;                    <attribute name="readonly">1</attribute>&ndash;&gt;-->
+<!--                    <attribute name="invisible">1</attribute>-->
+<!--                </xpath>-->
+                <xpath expr="//field[@name='department_id']" position="after">
+                     <field name="emp_grade" readonly="1"/>
+                </xpath>
+                <xpath expr="//field[@name='joining_date']" position="before">
+                    <field name="employee_type"/>
+                </xpath>
+                 <!-- Invisible field -->
+                 <xpath expr="//field[@name='mobile_phone']" position="attributes">
+                     <br/><br/>
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='job_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='coach_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//group[@name='location']/field[@name='address_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//group[@name='status']/field[@name='employee_type']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+<!--                group name change-->
+                <xpath expr="//group[@name='location']" position="attributes">
+                    <attribute name="string">Official Record</attribute>
+                </xpath>
+                <xpath expr="//field[@name='parent_id']" position="attributes">
+                    <attribute name="string">Reporting Manager</attribute>
+                </xpath>
+
+            </field>
+        </record>
+
+    <menuitem id="hr.menu_hr_employee_directory" name="Employee Directory" action="hr.hr_employee_public_action" parent="hr.menu_hr_root" sequence="3"
+                 groups="hr.group_hr_manager,hr.group_hr_user"/>
+
+<!--    <menuitem id="hr.menu_hr_employee_directory" name="Directory" action="hr.hr_employee_public_action" parent="hr.menu_hr_employee" sequence="3"-->
+<!--                 groups="hr.group_hr_manager,hr.group_hr_user"/>-->
+
+
+
+</odoo>

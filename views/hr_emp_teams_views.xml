@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_employee_teams_form" model="ir.ui.view">
+            <field name="name">hr.employee.teams.form</field>
+            <field name="model">hr.employee.teams</field>
+            <field name="arch" type="xml">
+                <form string="Team">
+                    <sheet>
+                        <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+                        <field name="active" invisible="1"/>
+                        <group col="4">
+                            <field name="name"/>
+                            <field name="active"/>
+                            <field name="company_id"/>
+                            <field name="manager_id"/>
+<!--                            <field name="note"/>-->
+                            <field name="note"/>
+<!--                            <field name="color"/>-->
+<!--                            <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company"/>-->
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_employee_teams_tree" model="ir.ui.view">
+            <field name="name">hr.employee.teams.tree</field>
+            <field name="model">hr.employee.teams</field>
+            <field name="arch" type="xml">
+                <tree string="Teams">
+                    <field name="name"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                    <field name="manager_id"/>
+<!--                    <field name="parent_id"/>-->
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_employee_teams_filter" model="ir.ui.view">
+            <field name="name">hr.employee.teams.search</field>
+            <field name="model">hr.employee.teams</field>
+            <field name="arch" type="xml">
+                <search string="Teams">
+                    <field name="name" string="Team"/>
+                    <field name="manager_id" />
+                    <filter string="Teams" name="name"/>
+<!--                    <filter string="Unread Messages" name="message_needaction" domain="[('message_needaction','=',True)]"/>-->
+<!--                    <separator/>-->
+<!--                    <filter string="Archived" name="inactive" domain="[('active','=',False)]"/>-->
+                </search>
+             </field>
+        </record>
+
+
+        <record id="view_employee_teams_action" model="ir.actions.act_window">
+            <field name="name">Teams</field>
+            <field name="res_model">hr.employee.teams</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_employee_teams_filter"/>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Create a new team
+              </p>
+<!--                <p>-->
+<!--                Odoo's department structure is used to manage all documents-->
+<!--                related to employees by departments: expenses, timesheets,-->
+<!--                leaves, recruitments, etc.-->
+<!--              </p>-->
+            </field>
+        </record>
+        <menuitem id="menu_hr_employee_teams" name="Employee Teams" parent="hr.menu_human_resources_configuration" action="view_employee_teams_action"/>
+    </data>
+</odoo>

@@ -1,0 +1,45 @@
+<odoo>
+    <record id="hr_employee_base_form_inherited" model="ir.ui.view">
+        <field name="name">hr.employee.form.inherited</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='work_email']" position="after">
+                <field name="mobile_personal"/>
+                <field name="employee_id"/>
+                <field name="section"/>
+                <field name="emp_grade"/>
+                <field name="emp_contract_type"/>
+            </xpath>
+            <xpath expr="//field[@name='address_id']" position="after">
+                <field name="joining_date"/>
+                <field name="probation_period"/>
+                <field name="conf_due_date"/>
+                <field name="date_of_confirmation"/>
+            </xpath>
+            <xpath expr="//field[@name='job_id']" position="after">
+                <field name="join_designation"/>
+            </xpath>
+            <xpath expr="//field[@name='country_id']" position="after">
+                <field name="tax_id"/>
+            </xpath>
+            <xpath expr="//field[@name='gender']" position="after">
+                <field name="present_address"/>
+            </xpath>
+            <xpath expr="//field[@name='emergency_phone']" position="after">
+                <field name="emergency_relation"/>
+                <field name="emergency_address"/>
+            </xpath>
+            <xpath expr="//field[@name='private_email']" position="attributes">
+                <attribute name="readonly">0</attribute>
+            </xpath>
+            <xpath expr="//field[@name='phone']" position="attributes">
+                <attribute name="readonly">0</attribute>
+            </xpath>
+            <xpath expr="//field[@name='department_id']" position="after">
+                <field name="team_name" readonl="1"/>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>
