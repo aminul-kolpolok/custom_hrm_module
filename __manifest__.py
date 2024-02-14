@@ -49,14 +49,16 @@
         'views/hr_section.xml',
         'views/hr_emp_grade.xml',
         'views/leave_balance_report.xml',
+        'chart_views/show_employee_chart.xml',
+        # 'views/org_chart_views.xml',
     ],
     'assets': {
         'web.assets_backend': [
-            # 'hrms_dashboard/static/src/css/hrms_dashboard.css',
-            # 'hrms_dashboard/static/src/css/lib/nv.d3.css',
-            # 'hrms_dashboard/static/src/js/hrms_dashboard.js',
-            # 'hrms_dashboard/static/src/js/lib/d3.min.js',
-            # 'hrms_dashboard/static/src/xml/hrms_dashboard.xml',
+            'custom_hrm_module/static/src/js/organizational_view.js',
+            'custom_hrm_module/static/src/scss/chart_view.scss',
+            'custom_hrm_module/static/src/xml/chart_view.xml',
+
+
         ],
     },
 
