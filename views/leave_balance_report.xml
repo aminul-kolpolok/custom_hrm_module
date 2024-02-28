@@ -73,8 +73,8 @@
 <!--&lt;!&ndash;        <field name="domain">[]</field>&ndash;&gt;-->
 <!--    </record>-->
     <menuitem
-        id="menu_hr_holidays_balance_report"
+        id="menu_hr_holidays_balance_reports"
         name="Leave Balance Report"
-        parent="hr_holidays.menu_hr_holidays_report"
-        sequence="3" groups="hr.group_hr_user" action="custom_hrm_module.server_action_leave_balances_report"/>
+        parent="hr_holidays.menu_hr_holidays_approvals"
+        groups="hr.group_hr_user" action="custom_hrm_module.server_action_leave_balances_report" sequence="4"/>
 </odoo>

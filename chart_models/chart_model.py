@@ -27,6 +27,7 @@ from odoo import models, fields, api
 class EmpOrganizationalChart(models.Model):
     _name = 'hr.organizational.chart'
     _description = "HR Organizational Chart"
+    # _inherit = "hr.employee.base"
 
     @api.model
     def get_employee_data(self, emp_id):
@@ -85,3 +86,5 @@ class EmpOrganizationalChart(models.Model):
         if emp.sudo().job_id:
             return emp.sudo().job_id.name
         return ""
+#----------------------------------------------------------------------------------------------
+

@@ -31,7 +31,7 @@
     'company': 'Cybrosys Techno Solutions',
     'maintainer': 'Cybrosys Techno Solutions',
     'website': "https://www.openhrms.com",
-    'depends': ['base','hr','hr_holidays','stock'],
+    'depends': ['base', 'hr', 'hr_holidays', 'stock', 'hr_attendance'],
     'external_dependencies': {
         'python': ['pandas'],
     },
@@ -50,14 +50,14 @@
         'views/hr_emp_grade.xml',
         'views/leave_balance_report.xml',
         'chart_views/show_employee_chart.xml',
-        # 'views/org_chart_views.xml',
+        # KPI xml file added here....,
+        'kpi_views/kpi_form_view.xml',
     ],
     'assets': {
         'web.assets_backend': [
             'custom_hrm_module/static/src/js/organizational_view.js',
             'custom_hrm_module/static/src/scss/chart_view.scss',
             'custom_hrm_module/static/src/xml/chart_view.xml',
-
 
         ],
     },

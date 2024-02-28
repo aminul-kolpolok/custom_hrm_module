@@ -23,4 +23,5 @@
 from . import models
 from . import chart_models
 from . import controller
+from . import kpi_directory
 
