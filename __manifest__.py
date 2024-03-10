@@ -51,7 +51,7 @@
         'views/leave_balance_report.xml',
         'chart_views/show_employee_chart.xml',
         # KPI xml file added here....,
-        'kpi_views/kpi_form_view.xml',
+        # 'kpi_views/kpi_form_view.xml',
     ],
     'assets': {
         'web.assets_backend': [

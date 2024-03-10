@@ -16,6 +16,7 @@
                 <field name="probation_period"/>
                 <field name="conf_due_date"/>
                 <field name="date_of_confirmation"/>
+<!--                <field name="punch_type"/>-->
             </xpath>
             <xpath expr="//field[@name='job_id']" position="after">
                 <field name="join_designation"/>

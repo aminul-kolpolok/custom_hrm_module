@@ -47,9 +47,9 @@
                 <xpath expr="//field[@name='lang']" position="attributes">
                     <attribute name="readonly">1</attribute>
                 </xpath>
-                <xpath expr="//field[@name='tz']" position="attributes">
-                    <attribute name="readonly">1</attribute>
-                </xpath>
+<!--                <xpath expr="//field[@name='tz']" position="attributes">-->
+<!--                    <attribute name="readonly">1</attribute>-->
+<!--                </xpath>-->
                 <xpath expr="//field[@name='odoobot_state']" position="attributes">
                     <attribute name="readonly">1</attribute>
                 </xpath>

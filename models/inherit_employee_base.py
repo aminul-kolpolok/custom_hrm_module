@@ -54,19 +54,8 @@ class HrEmployeePrivate(models.Model):
         string='Emergency Relation',
         help='Select the emergency relation',
     )
-
     team_name = fields.Many2one('hr.employee.teams', string='Team Name')
 
-
-
-
-
-    # @api.onchange('joining_date')
-    # def onchange_joining_date(self):
-    #     for employee in self:
-    #         contracts = self.env['hr.contract'].search([('employee_id', '=', employee.id)], limit=1)
-    #         if contracts:
-    #             contracts.write({'date_start': employee.joining_date})
 
 
     @api.onchange('joining_date', 'probation_period') # This function is used for the calcualte probation period date!
