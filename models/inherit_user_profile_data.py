@@ -28,7 +28,7 @@ class Users(models.Model):
         related='employee_id.emergency_relation'
     )
 
-    team_name = fields.Many2one(string='Team Name', related="employee_id.team_name")
+    team_name = fields.Many2one(string='Team Name', related="employee_id.team_name", readonly=True)
 
 
     department_id = fields.Many2one(string="Department", related="employee_id.department_id")
