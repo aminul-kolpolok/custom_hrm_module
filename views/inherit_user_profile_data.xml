@@ -7,7 +7,7 @@
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='department_id']" position="after">
                     <field name="joining_date"/>
-                    <field name="probation_period"/>
+                    <field name="probation_period" invisible="1"/>
                     <field name="conf_due_date"/>
                     <field name="date_of_confirmation"/>
                 </xpath>
