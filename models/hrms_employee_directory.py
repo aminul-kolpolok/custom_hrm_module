@@ -39,7 +39,7 @@ class HrEmployeePublic(models.Model):
     team_name = fields.Many2one('hr.employee.teams', string='Team Name')
     emp_contract_type = fields.Many2one(string="Employee Category", store="True",
                                         related='employee_id.emp_contract_type')
-    # leave_manager_id = fields.Char(string='Time Off')
+    # leave_manager_id = fields.Many2one(string='Time Off', invisible=True)
 
 
 

@@ -5,5 +5,7 @@ access_hr_section,hr_section,model_hr_section,base.group_user,1,1,1,1
 access_hr_grade,hr_grade,model_hr_grade,base.group_user,1,1,1,1
 access_leave_balance_report,leave_balance_report,model_leave_balance_report,base.group_user,1,1,1,1
 access_hr_organizational_chart,access_hr_organizational_chart,model_hr_organizational_chart,base.group_user,1,0,0,0
+access_hr_attendance_report_wizard,hr_attendance_report_wizard,model_hr_attendance_report_wizard,base.group_user,1,1,1,1
+
 
 

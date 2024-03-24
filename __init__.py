@@ -23,5 +23,6 @@
 from . import models
 from . import chart_models
 from . import controller
+from . import report
 # from . import kpi_models
 

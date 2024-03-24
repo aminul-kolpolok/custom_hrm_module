@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="employee_attendance_wizard_report_form" model="ir.ui.view">
+            <field name="name">hr.attendance.Report.Wizard.Form</field>
+            <field name="model">hr.attendance.report.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Report attendance Wizard">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="employee_id"/>
+                                <field name="start_date"/>
+                            </group>
+
+                            <group>
+                                <field name="report_date"/>
+                                <field name="end_date"/>
+                            </group>
+<!--                            <group>-->
+<!--                                <field name="date_to"/>-->
+<!--                            </group>-->
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button string="Print" name="action_btn_attendance_report_info" class="btn btn-info"
+                                type="object"/>
+                        <button string="Cancel" name="cancel_action" class="btn btn-danger" type="object"
+                                special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_attendance_employee_report_id" model="ir.actions.act_window">
+            <field name="name">hr.attendance.report.wizard</field>
+            <field name="res_model">hr.attendance.report.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="monthly_attendance_report_root_menu" parent="hr_attendance.menu_hr_attendance_root" sequence="55" name="Report Manager" />
+        <menuitem id="menu_employees_attendance_report_view" name="Attendance Report" action="action_attendance_employee_report_id"
+                  parent="monthly_attendance_report_root_menu" groups="hr_attendance.group_hr_attendance_user" sequence="7"/>
+
+
+    </data>
+</odoo>

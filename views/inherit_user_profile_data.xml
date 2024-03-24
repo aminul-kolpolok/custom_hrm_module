@@ -18,11 +18,8 @@
                 <xpath expr="//field[@name='work_phone']" position="after">
                     <field name="team_name" options="{'no_open': True}"/>
                     <field name="section" options="{'no_open': True}"/>
-                    <field name="leave_manager_id" options="{'no_open': True}"/>
                 </xpath>
                 <xpath expr="//field[@name='work_location_id']" position="before">
-<!--                    <field name="department_id" readonly="1"/>-->
-                    <field name="leave_manager_id" options="{'no_open': True}"/>
                     <field name="emp_grade" options="{'no_open': True}"/>
                 </xpath>
                 <xpath expr="//field[@name='employee_country_id']" position="after">
@@ -33,6 +30,7 @@
                     <attribute name="readonly">1</attribute>
                     <attribute name="options">{'no_open': True}</attribute>
                 </xpath>
+
                 <xpath expr="//field[@name='work_email']" position="attributes">
                     <attribute name="readonly">1</attribute>
                 </xpath>
@@ -79,9 +77,10 @@
                 <xpath expr="//field[@name='probation_period']" position="attributes">
                     <attribute name="readonly">1</attribute>
                 </xpath>
-                <xpath expr="//field[@name='leave_manager_id']" position="attributes">
-                    <attribute name="readonly">1</attribute>
-                </xpath>
+<!--                <xpath expr="//field[@name='leave_manager_id']" position="attributes">-->
+<!--                    <attribute name="options">{'no_open': True}</attribute>-->
+<!--                    <attribute name="readonly">1</attribute>-->
+<!--                </xpath>-->
                 <xpath expr="//field[@name='employee_parent_id']" position="attributes">
                     <attribute name="readonly">1</attribute>
                 </xpath>

@@ -13,43 +13,65 @@
                 </xpath>
 
                 <xpath expr="//field[@name='work_email']" position="after">
-                    <field name="team_name" readonly="1"/>
-                    <field name="section"/>
-                    <field name="emp_contract_type"/>
+                    <field name="team_name" readonly="1" options="{'no_open': True}"/>
+                    <field name="section" options="{'no_open': True}"/>
+                    <field name="emp_contract_type" options="{'no_open': True}"/>
                 </xpath>
 <!--                <xpath expr="//field[@name='leave_manager_id']" position="attributes">-->
-<!--&lt;!&ndash;                    <attribute name="readonly">1</attribute>&ndash;&gt;-->
-<!--                    <attribute name="invisible">1</attribute>-->
+<!--                    <attribute name="readonly">1</attribute>-->
+<!--                    <attribute name="options">{'no_open': True}</attribute>-->
 <!--                </xpath>-->
                 <xpath expr="//field[@name='department_id']" position="after">
-                     <field name="emp_grade" readonly="1"/>
+                     <field name="emp_grade" readonly="1" options="{'no_open': True}"/>
                 </xpath>
+
+
                 <xpath expr="//field[@name='joining_date']" position="before">
-                    <field name="employee_type"/>
+                    <field name="employee_type" options="{'no_open': True}"/>
                 </xpath>
                  <!-- Invisible field -->
                  <xpath expr="//field[@name='mobile_phone']" position="attributes">
                      <br/><br/>
                     <attribute name="invisible">1</attribute>
+
                 </xpath>
+
                 <xpath expr="//field[@name='job_id']" position="attributes">
                     <attribute name="invisible">1</attribute>
                 </xpath>
+
+                <xpath expr="//field[@name='department_id']" position="attributes">
+                    <attribute name="options">{'no_open': True}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='resource_calendar_id']" position="attributes">
+                    <attribute name="options">{'no_open': True}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='user_id']" position="attributes">
+                    <attribute name="options">{'no_open': True}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='company_id']" position="attributes">
+                    <attribute name="options">{'no_open': True}</attribute>
+                </xpath>
                 <xpath expr="//field[@name='coach_id']" position="attributes">
                     <attribute name="invisible">1</attribute>
+                    <attribute name="options">{'no_open': True}</attribute>
                 </xpath>
                 <xpath expr="//group[@name='location']/field[@name='address_id']" position="attributes">
                     <attribute name="invisible">1</attribute>
+                    <attribute name="options">{'no_open': True}</attribute>
                 </xpath>
                 <xpath expr="//group[@name='status']/field[@name='employee_type']" position="attributes">
                     <attribute name="invisible">1</attribute>
+                    <attribute name="options">{'no_open': True}</attribute>
                 </xpath>
 <!--                group name change-->
                 <xpath expr="//group[@name='location']" position="attributes">
                     <attribute name="string">Official Record</attribute>
+                    <attribute name="options">{'no_open': True}</attribute>
                 </xpath>
                 <xpath expr="//field[@name='parent_id']" position="attributes">
                     <attribute name="string">Reporting Manager</attribute>
+                    <attribute name="options">{'no_open': True}</attribute>
                 </xpath>
 
             </field>
