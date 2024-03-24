@@ -29,6 +29,7 @@
         'views/hr_emp_grade.xml',
         'views/leave_balance_report.xml',
         'chart_views/show_employee_chart.xml',
+        'views/hr_attendence_inherited_view.xml',
         'report/attendance_report_wizard.xml',
         'report/report_view.xml',
         'report/employee_attendance_report_format.xml',
