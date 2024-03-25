@@ -39,9 +39,9 @@
             <field name="target">new</field>
         </record>
 
-        <menuitem id="monthly_attendance_report_root_menu" parent="hr_attendance.menu_hr_attendance_root" sequence="55" name="Report Manager" />
-        <menuitem id="menu_employees_attendance_report_view" name="Attendance Report" action="action_attendance_employee_report_id"
-                  parent="monthly_attendance_report_root_menu" groups="hr_attendance.group_hr_attendance_user" sequence="7"/>
+<!--        <menuitem id="monthly_attendance_report_root_menu" parent="hr_attendance.menu_hr_attendance_root" sequence="55" name="Report Manager" />-->
+<!--        <menuitem id="menu_employees_attendance_report_view" name="Attendance Report" action="action_attendance_employee_report_id"-->
+<!--                  parent="monthly_attendance_report_root_menu" groups="hr_attendance.group_hr_attendance_user" sequence="7"/>-->
 
 
     </data>
