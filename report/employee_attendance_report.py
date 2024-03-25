@@ -13,7 +13,7 @@ class AllAttendanceReport(models.AbstractModel):
 
         # Construct the SQL query
         query = """
-            SELECT *
+            SELECT id, employee_id, check_in, check_out, worked_hours
             FROM hr_attendance
             WHERE employee_id = %s
         """

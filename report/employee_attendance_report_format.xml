@@ -41,49 +41,49 @@
                                 </th>
                             </tr>
                         </thead>
-                        <t t-set="employee_count" t-value="0"/>
+<!--                        <t t-set="employee_count" t-value="0"/>-->
                         <t t-foreach="docs" t-as="line">
-                            <t t-set="employee_count" t-value="employee_count + 1"/>
+<!--                            <t t-set="employee_count" t-value="employee_count + 1"/>-->
                             <tr>
-                                <td>
-                                    <span t-esc="line.employee_id"/>
-                                </td>
-                                <td>
-                                    <span t-esc="line.employee_name"/>
-                                </td>
-                                <td>
-                                    <span t-esc="line.department"/>
-                                </td>
-                                <td>
-                                    <span t-esc="line.date"/>
-                                </td>
+<!--                                <td>-->
+<!--                                    <span t-esc="line.employee_id"/>-->
+<!--                                </td>-->
+<!--                                <td>-->
+<!--                                    <span t-esc="line.employee_name"/>-->
+<!--                                </td>-->
+<!--                                <td>-->
+<!--                                    <span t-esc="line.department"/>-->
+<!--                                </td>-->
+<!--                                <td>-->
+<!--                                    <span t-esc="line.date"/>-->
+<!--                                </td>-->
                                 <td>
                                     <span t-esc="line.check_in"/>
                                 </td>
                                 <td>
                                     <span t-esc="line.check_out"/>
                                 </td>
-                                <td>
-                                    <span t-esc="line.late_time"/>
-                                </td>
-                                <td>
-                                    <span t-esc="line.early_time"/>
-                                </td>
+<!--                                <td>-->
+<!--                                    <span t-esc="line.late_time"/>-->
+<!--                                </td>-->
+<!--                                <td>-->
+<!--                                    <span t-esc="line.early_time"/>-->
+<!--                                </td>-->
                                 <td>
                                     <span t-esc="line.worked_hours"/>
                                 </td>
                             </tr>
                         </t>
-                        <tr>
-                            <td>
-                                <strong>Total Employee:</strong>
-                            </td>
-                            <td>
-                                <strong>
-                                    <span t-esc="employee_count"/>
-                                </strong>
-                            </td>
-                        </tr>
+<!--                        <tr>-->
+<!--                            <td>-->
+<!--                                <strong>Total Employee:</strong>-->
+<!--                            </td>-->
+<!--                            <td>-->
+<!--                                <strong>-->
+<!--                                    <span t-esc="employee_count"/>-->
+<!--                                </strong>-->
+<!--                            </td>-->
+<!--                        </tr>-->
                     </table>
                 </div>
             </t>

@@ -3,9 +3,7 @@
         <field name="name">hr.attendance.form.inherited</field>
         <field name="model">hr.attendance</field>
         <field name="inherit_id" ref="hr_attendance.view_attendance_tree"/>
-        <!--            <field name="priority" eval="8"/>-->
         <field name="arch" type="xml">
-
             <xpath expr="//field[@name='check_in']" position="attributes">
                 <attribute name="readonly">True</attribute>
             </xpath>
@@ -15,7 +13,6 @@
             <xpath expr="//field[@name='employee_id']" position="attributes">
                 <attribute name="readonly">True</attribute>
             </xpath>
-
         </field>
     </record>
 

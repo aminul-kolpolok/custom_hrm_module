@@ -1,0 +1,11 @@
+<odoo>
+      <record model="ir.ui.menu" id="hr_holidays.menu_hr_holidays_root">
+        <field name="name">Time off/Leave request</field>
+      </record>
+    <record model="ir.ui.menu" id="hr_expense.menu_hr_expense_root">
+        <field name="name">Expense/Allowance</field>
+      </record>
+    <record model="ir.ui.menu" id="hrms_dashboard.menu_hrms_dashboard">
+        <field name="name">HR Dashboard</field>
+    </record>
+</odoo>
