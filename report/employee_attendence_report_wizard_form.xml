@@ -2,7 +2,7 @@
 <odoo>
     <data>
         <record id="action_report_attendence_report_wizard" model="ir.actions.report">
-            <field name="name">Employee Report</field>
+            <field name="name">Employee Attendance Report</field>
             <field name="model">employee.attendence.report.wizard</field>
             <field name="report_type">qweb-pdf</field>
             <field name="report_name">custom_hrm_module.report_one_set</field>

@@ -28,10 +28,10 @@
 				</group>
 				<footer>
 					<button name="generate_employee_pdf_report" type="object" string="PDF Report"
-					class="btn-primary" data-hotkey="q"/> 
+					class="btn-success" data-hotkey="q"/>
 					<button name="generate_employee_excel_report" type="object" string="Excel Report" class="btn-primary" data-hotkey="q"/> 
 					<button special="cancel" data-hotkey="z" type="object" string="Cancel"
-					class="btn-secondary"/>
+					class="btn-danger"/>
 				</footer>
 			</form>
 		</field>

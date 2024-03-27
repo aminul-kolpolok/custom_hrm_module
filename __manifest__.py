@@ -31,7 +31,7 @@
         'chart_views/show_employee_chart.xml',
         'views/hr_attendence_inherited_view.xml',
         'views/custom_rename_manu_view.xml',
-        # 'views/hr_employee_view.xml',
+        'views/custom_hr_attendance_view.xml',
         # 'report/attendance_report_wizard.xml',
         # 'report/report_view.xml',
         # 'report/employee_attendance_report_format.xml',

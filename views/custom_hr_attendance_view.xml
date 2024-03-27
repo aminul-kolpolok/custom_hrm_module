@@ -1,0 +1,15 @@
+<odoo>
+    <record id="custom_hr_attendance_tree_view_inherited" model="ir.ui.view">
+        <field name="name">hr.attendance.inherited</field>
+        <field name="model">hr.attendance</field>
+        <field name="inherit_id" ref="hr_attendance.view_attendance_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='worked_hours']" position="before">
+                <field name="early_time"/>
+                <field name="late_time"/>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>
