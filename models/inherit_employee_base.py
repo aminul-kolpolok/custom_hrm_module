@@ -35,7 +35,7 @@ class HrEmployeePrivate(models.Model):
     length_of_service = fields.Char(string="Length of service:", groups='hr.group_hr_user')
     forecasting_confirmation = fields.Date("Forecasting Confirmation", groups="hr.group_hr_user",
                                            help="Forecasting confirmation")
-    employee_id = fields.Char(string="Employee Id", store="True")
+    employee_job_id = fields.Char(string="Employee Job Id")
     #---
     section = fields.Many2one('hr.section', string="Section", store="True")
     emp_grade = fields.Many2one('hr.grade', string="Grade", store="True")

@@ -32,6 +32,7 @@
         'views/hr_attendence_inherited_view.xml',
         'views/custom_rename_manu_view.xml',
         'views/custom_hr_attendance_view.xml',
+        # 'views/_inherit_hr_job_id_views.xml',
         # 'report/attendance_report_wizard.xml',
         # 'report/report_view.xml',
         # 'report/employee_attendance_report_format.xml',

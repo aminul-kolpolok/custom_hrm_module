@@ -11,3 +11,4 @@ from . import hr_section
 from . import hr_emp_grade
 from . import leave_balance_report
 from . import custom_hr_attendance_model
+# from . import _inherit_hr_job_custom

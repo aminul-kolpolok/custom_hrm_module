@@ -27,13 +27,11 @@ class Users(models.Model):
         help='Select the emergency relation',
         related='employee_id.emergency_relation'
     )
-
+    employee_job_id = fields.Char(string="Employee Job Id", related="employee_id.employee_job_id", readonly=True)
     team_name = fields.Many2one(string='Team Name', related="employee_id.team_name", readonly=True)
-
-
     department_id = fields.Many2one(string="Department", related="employee_id.department_id")
     emp_grade = fields.Many2one(string="Grade", related="employee_id.emp_grade")
-    section = fields.Many2one(string="Section", related="employee_id.emp_grade")
+    section = fields.Many2one(string="Section", related="employee_id.section")
     tax_id = fields.Char(string="Tin No.", related='employee_id.tax_id')
     # expense_manager_id = fields.Many2one('res.users', invisible=True)
 

@@ -6,7 +6,7 @@
         <field name="arch" type="xml">
             <xpath expr="//field[@name='work_email']" position="after">
                 <field name="mobile_personal"/>
-                <field name="employee_id"/>
+                <field name="employee_job_id"/>
                 <field name="section"/>
                 <field name="emp_grade"/>
                 <field name="emp_contract_type"/>
