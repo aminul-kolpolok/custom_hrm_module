@@ -30,7 +30,7 @@
         'views/leave_balance_report.xml',
         'chart_views/show_employee_chart.xml',
         'views/hr_attendence_inherited_view.xml',
-        'views/rename_manu_view.xml',
+        'views/custom_rename_manu_view.xml',
         # 'views/hr_employee_view.xml',
         # 'report/attendance_report_wizard.xml',
         # 'report/report_view.xml',
