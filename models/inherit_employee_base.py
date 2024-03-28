@@ -24,13 +24,11 @@ class HrEmployeePrivate(models.Model):
         ('other', 'Other'),
     ]
 
-    # employee_type_id = fields.Many2one('hr.employee.type', string="Employment Type", readonly=True)
     joining_date = fields.Date(string="Date of Joining:",
                                help='Date of first Employment fi it was before the start of the ',
                                groups="hr.group_hr_user", readonly=False) #, readonly=False
     probation_period = fields.Many2one('hr.probation.period', domain=[], string="Probation Period", groups='hr.group_hr_user')
     conf_due_date = fields.Date(string="Conf. Due Date:", groups='hr.group_hr_user')
-    # joining_date = fields.Date(string="Joining date.", groups='hr.group_hr_user', store="True", readonly=False)
     date_of_confirmation = fields.Date(string="Date of Confirmation:", store=True)
     length_of_service = fields.Char(string="Length of service:", groups='hr.group_hr_user')
     forecasting_confirmation = fields.Date("Forecasting Confirmation", groups="hr.group_hr_user",

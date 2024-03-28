@@ -6,6 +6,7 @@
         <!--            <field name="priority" eval="8"/>-->
         <field name="arch" type="xml">
             <xpath expr="//field[@name='address_id']" position="before">
+                <field name="employee_job_id"/>
                 <field name="joining_date"/>
                 <field name="probation_period" invisible="1"/>
                 <field name="conf_due_date"/>

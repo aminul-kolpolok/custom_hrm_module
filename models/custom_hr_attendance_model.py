@@ -15,3 +15,19 @@ class HrAttendance(models.Model):
 
     late_time = fields.Float(string="Late")
     early_time = fields.Float(string="Early Leave")
+
+    @api.depends('check_out')
+    def _compute_early_time(self):
+        for attendance in self:
+            if attendance.check_out:
+                end_time = fields.Datetime.from_string(attendance.check_out).replace(hour=18, minute=30, second=0,
+                                                                                     microsecond=0)  # End time is 6:30 PM
+                if fields.Datetime.from_string(attendance.check_out) < end_time:
+                    early_delta = end_time - fields.Datetime.from_string(attendance.check_out)
+                    hours = int(early_delta.total_seconds() // 3600)
+                    minutes = int((early_delta.total_seconds() % 3600) // 60)
+                    attendance.early_time = hours + minutes / 60.0  # Convert minutes to hours
+                else:
+                    attendance.early_time = 0.0
+            else:
+                attendance.early_time = 0.0
